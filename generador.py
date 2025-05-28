@@ -1,4 +1,5 @@
 import random
+import utils
 
 
 MAX_PALABRAS = 200
@@ -24,13 +25,7 @@ def generar_palabras(letras, centro):
     return palabras
 
 
-def escribir_palabras(palabras, file_name):
-    with open(file_name, "w") as file:
-        for palabra in palabras:
-            file.write(palabra + "\n")
-
-
 if __name__ == "__main__":
     palabras = generar_palabras(letras, centro)
-    escribir_palabras(palabras, FILE_NAME)
+    utils.escribir_palabras(palabras, FILE_NAME)
     print(f"{len(palabras)} palabras y se han guardado en '{FILE_NAME}'")

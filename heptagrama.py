@@ -1,5 +1,5 @@
-import pyautogui
-import time
+from typing import List
+from pydantic import BaseModel, field_validator
 
 
 FILE_NAME = "candidatos.txt"
@@ -7,23 +7,28 @@ INIT_DELAY = 5
 TIME_BETWEEN_WORDS = .01
 
 
-def countdown(seconds):
-    for i in range(seconds, 0, -1):
-        print(f"\rEmpezando en {i}...", end="", flush=True)
-        time.sleep(1)
+class Heptagrama(BaseModel):
+    letras: List[str]
+    centro: str
 
+    @field_validator('letras')
+    def validar_letras(self):
+        if len(self.letras) != 7:
+            raise ValueError('The list must contain exactly 7 characters.')
+        if len(set(self.letras)) != 7:
+            raise ValueError('The characters in the list must be unique.')
+        for char in self.letras:
+            if len(char) != 1:
+                raise ValueError('Each item in the list must be a single character.')
+        return self
 
-def palabras_generator():
-    with open(FILE_NAME, "r") as file:
-        for line in file:
-            yield line.strip()
+    @field_validator('centro')
+    def validar_centro(self):
+        if self.centro not in self.letras:
+            raise ValueError('The special character must be one of the characters '
+                             'in the list.')
+        if len(self.centro) != 1:
+            raise ValueError('The special character must be a single character.')
+        return self
 
-
-if __name__ == "__main__":
-    countdown(INIT_DELAY)
-    for palabra in palabras_generator():
-        pyautogui.write(palabra)
-        pyautogui.press("enter")
-        time.sleep(TIME_BETWEEN_WORDS)
-    print("Todas las palabras han sido escritas.")
 
