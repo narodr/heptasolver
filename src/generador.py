@@ -1,5 +1,5 @@
 import random
-import utils
+import src.utils as utils
 
 
 MAX_PALABRAS = 200

@@ -1,6 +1,6 @@
 import pyautogui
 import time
-import utils
+import src.utils as utils
 
 
 FILE_NAME = "candidatos.txt"
