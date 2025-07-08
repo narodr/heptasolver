@@ -2,11 +2,7 @@ from typing import List
 from pydantic import BaseModel, ValidationInfo, field_validator
 
 
-FILE_NAME = "candidatos.txt"
-INIT_DELAY = 5
-TIME_BETWEEN_WORDS = .01
-
-
+# TODO: Implementar tipos Annotated con StringConstraints para los atributos
 class Heptagrama(BaseModel):
     letras: List[str]
     centro: str
