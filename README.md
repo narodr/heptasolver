@@ -19,3 +19,16 @@ pip install .
 heptasolver --letras a b c d e f g --centro a
 ```
 
+### Desarrollo
+
+Instalar la librería en modo editable:
+
+```sh
+pip install -e .
+```
+
+y ejecutar los tests:
+
+```sh
+pytest
+```
