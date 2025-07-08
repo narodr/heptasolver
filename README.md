@@ -1,6 +1,6 @@
 # heptasolver
 
-Resuelve automáticamente un [heptagrama](https://elpais.com/juegos/heptagrama/).
+Resuelve automáticamente un [heptagrama](https://elpais.com/juegos/heptagrama/)
 
 > A partir de siete letras dispuestas de manera hexagonal, con una de ellas en la 
 posición central, el objetivo es formar el máximo número de palabras de al menos tres letras.
