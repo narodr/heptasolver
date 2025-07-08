@@ -6,14 +6,3 @@ Resuelve automáticamente un [heptagrama](https://elpais.com/juegos/heptagrama/)
 posición central, el objetivo es formar el máximo número de palabras de al menos tres letras.
 Puedes repetir las letras, pero siempre debes incluir la que está en la posición central. 
 No se admiten nombres propios, plurales ni formas verbales conjugadas (solo infinitivos). 
-
-
-
-
-
-
-
-
-
-
-

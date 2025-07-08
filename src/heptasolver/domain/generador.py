@@ -1,5 +1,5 @@
 from itertools import permutations, combinations
-from src.heptagrama import Heptagrama
+from src.heptasolver.domain.heptagrama import Heptagrama
 from unidecode import unidecode
 
 

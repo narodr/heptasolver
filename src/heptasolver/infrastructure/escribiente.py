@@ -1,6 +1,6 @@
 import pyautogui
 import time
-import src.utils as utils
+import src.heptasolver.utils as utils
 
 
 FILE_NAME = "candidatos.txt"

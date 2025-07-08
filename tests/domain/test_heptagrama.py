@@ -1,6 +1,6 @@
 import pytest
 from pydantic import ValidationError
-from src.heptagrama import Heptagrama
+from src.heptasolver.domain.heptagrama import Heptagrama
 
 
 def test_valid_heptagrama():
