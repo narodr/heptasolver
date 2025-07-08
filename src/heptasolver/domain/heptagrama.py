@@ -26,6 +26,9 @@ class Heptagrama(BaseModel):
         if letras is not None and values not in letras:
             raise ValueError('The special character must be one of the characters in the list.')
         return values
+    
+    def __str__(self):
+        return "Heptagrama({}, {})".format(self.letras, self.centro)
 
 
 
