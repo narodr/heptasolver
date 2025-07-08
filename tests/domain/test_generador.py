@@ -1,7 +1,7 @@
 import pytest
 from unittest.mock import patch
-from src.heptasolver.domain.generador import RAEGenerator
-from src.heptasolver.domain import generador
+from heptasolver.domain.generador import RAEGenerator
+from heptasolver.domain import generador
 
 class DummyHeptagrama:
     def __init__(self, letras, centro):
