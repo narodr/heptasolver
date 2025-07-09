@@ -16,7 +16,7 @@ pip install .
 ### Usar
 
 ```sh
-heptasolver --letras a b c d e f g --centro a
+heptasolver --letras abdcefg --centro a
 ```
 
 ### Desarrollo
