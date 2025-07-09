@@ -1,4 +1,4 @@
-from itertools import permutations
+from itertools import combinations
 from heptasolver.domain.heptagrama import Heptagrama
 from heptasolver.domain.trie import RAETrie
 
@@ -22,18 +22,20 @@ class RAEGenerator:
         return next(self._iterator)
 
     def generate(self):
-        seen = set()
+        keys = self._get_keys()
+        for key in keys:
+            words = self.dictionary.get_words_in_node(key)
+            if not words:
+                continue
+            for word in words:
+                yield word
+
+    def _get_keys(self):
+        letters = sorted(self.heptagrama.letras)
+        keys = []
         for length in range(3, 8):
-            for p in permutations(self.heptagrama.letras, length):
-                if self.heptagrama.centro in p:
-                    word = ''.join(p)
-                    if word not in seen and self._is_in_rae(word):
-                        seen.add(word)
-                        yield word
-
-    def _is_in_rae(self, word: str) -> bool:
-        return self.dictionary.search(word)
-
-
-
-
+            for combo in combinations(letters, length):
+                if self.heptagrama.centro in combo:
+                    word = ''.join(combo)
+                    keys.append(word)
+        return keys
