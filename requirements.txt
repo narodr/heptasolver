@@ -2,3 +2,4 @@ pyautogui
 pydantic
 pytest
 unidecode
+click
