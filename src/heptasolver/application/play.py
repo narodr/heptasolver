@@ -4,7 +4,7 @@ from heptasolver.domain.generador import RAEGenerator
 from heptasolver.infrastructure.escribiente import Escribiente
 
 
-@click.command()
+@click.command(help="Jugar un heptagrama")
 @click.option(
     '-l', '--letras',
     required=False,
