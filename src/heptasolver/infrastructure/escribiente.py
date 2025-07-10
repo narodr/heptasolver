@@ -1,6 +1,6 @@
 import pyautogui
 import time
-import heptasolver.utils as utils
+import heptasolver.infrastructure.utils as utils
 from typing import Union
 
 

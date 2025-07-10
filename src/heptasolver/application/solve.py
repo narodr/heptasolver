@@ -16,7 +16,7 @@ from heptasolver.infrastructure.escribiente import Escribiente
     required=True,
     help='La letra central del heptagrama (p.e. --centro a)'
 )
-def main(letras, centro):
+def solve(letras, centro):
     if len(letras) != 7:
         click.echo(f"{letras=}, {len(letras)=}")
         raise click.BadParameter("Debes proporcionar exactamente 7 letras para el heptagrama.")
@@ -37,5 +37,5 @@ def main(letras, centro):
     click.echo(f"Fin - {count} palabras en {elapsed:.2f} segundos")
 
 if __name__ == "__main__":
-    main()
+    solve()
 
