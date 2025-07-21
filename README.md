@@ -1,5 +1,3 @@
-# heptasolver
-
 Juega o resuelve un [heptagrama](https://elpais.com/juegos/heptagrama/)
 
 > A partir de siete letras dispuestas de manera hexagonal, con una de ellas en la 
@@ -26,26 +24,25 @@ un escribidor que introduce las palabras por ti.
 heptasolver solve --letras abdcefg --centro a
 ```
 
-## Instalación
+## Empezar
 
-1. Clonar el respositorio
-2. Crear un entorno virtual (opcionalmente)
-3. Instalar la librería
+1. Clona el respositorio y crea un entorno virtual
+3. Instala la librería
 
     ```sh
     pip install .
     ```
 
-## Desarrollo
+o bien, si quieres contribuir:
 
-Instalar la librería en modo editable:
+3. Instala la librería en modo editable:
+    
+    ```sh
+    pip install -e .
+    ```
 
-```sh
-pip install -e .
-```
+4. ejecuta los tests:
 
-y ejecutar los tests:
-
-```sh
-pytest
-```
+    ```sh
+    pytest
+    ```
