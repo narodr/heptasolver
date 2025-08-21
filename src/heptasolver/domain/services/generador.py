@@ -1,6 +1,6 @@
 from itertools import combinations
-from heptasolver.domain.heptagrama import Heptagrama
-from heptasolver.domain.trie import RAETrie
+from heptasolver.domain.entities.heptagrama import Heptagrama
+from heptasolver.domain.entities.trie import RAETrie
 
 
 class RAEGenerator:

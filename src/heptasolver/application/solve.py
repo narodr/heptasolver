@@ -1,7 +1,7 @@
 import click
 import time
-from heptasolver.domain.heptagrama import Heptagrama
-from heptasolver.domain.generador import RAEGenerator
+from heptasolver.domain.entities.heptagrama import Heptagrama
+from heptasolver.domain.services.generador import RAEGenerator
 from heptasolver.infrastructure.escribiente import Escribiente
 
 
