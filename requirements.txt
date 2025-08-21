@@ -4,3 +4,4 @@ pytest
 unidecode
 click
 windows-curses
+keyboard
