@@ -11,38 +11,42 @@ No se admiten nombres propios, plurales ni formas verbales conjugadas (solo infi
 Puedes jugar una partida a través de la terminal ejecutando el comando play. Opcionalmente puedes especificar el centro o las letras que quieres jugar.
 
 ```sh
-heptasolver play
+heptasolver play [-l abcdefg] [-c a]
 ```
 
-###  Resolver un heptagrama
+## Instalación
 
-Si quieres resolver automáticamente un hetpagrama, puedes usar el comando solve
-y dirigirte a la pantalla en la que está el heptagrama. heptasolver implementa
-un escribidor que introduce las palabras por ti.
+Clona el repositorio y crea un entorno virtual. Instala la librería:
+
+```sh
+pip install .
+```
+
+Para desarrollo, instálalo en modo editable:
+    
+```sh
+pip install -e .
+```
+
+y ejecuta los tests:
+
+```sh
+pytest
+```
+
+## Extra: Resolver un heptagrama
+
+> [!WARNING] 
+> Usa `pyautogui` para escribir automáticamente las palabras en la ventana seleccionada.
+
+Si quieres resolver automáticamente un hetpagrama, puedes usar el comando solve y dirigirte a la pantalla en la que está el heptagrama.
 
 ```sh
 heptasolver solve --letras abdcefg --centro a
 ```
 
-## Empezar
+## Roadmap
 
-1. Clona el respositorio y crea un entorno virtual
-3. Instala la librería
+- [ ] Otros diccionarios de palabras 
+- [ ] Puntuación
 
-    ```sh
-    pip install .
-    ```
-
-o bien, si quieres contribuir:
-
-3. Instala la librería en modo editable:
-    
-    ```sh
-    pip install -e .
-    ```
-
-4. ejecuta los tests:
-
-    ```sh
-    pytest
-    ```

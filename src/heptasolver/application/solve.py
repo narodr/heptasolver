@@ -1,7 +1,8 @@
 import click
 import time
-from heptasolver.domain.heptagrama import Heptagrama
-from heptasolver.domain.generador import RAEGenerator
+import keyboard
+from heptasolver.domain.entities.heptagrama import Heptagrama
+from heptasolver.domain.services.generador import RAEGenerator
 from heptasolver.infrastructure.escribiente import Escribiente
 
 
@@ -25,12 +26,16 @@ def solve(letras, centro):
     heptagrama = Heptagrama(letras=letras, centro=centro)
     generador = RAEGenerator(heptagrama)
     escribiente = Escribiente()
-    click.echo(f"Resolviendo {heptagrama}")
+    click.echo(f"Resolviendo {heptagrama}. Pulsa cualquier ESC para salir.")
 
     start_time = time.time()
     count = 0
     for palabra in generador:
         escribiente.escribir(palabra)
+        if keyboard.is_pressed('esc'):
+            #TODO: Esto no funciona muy bien
+            print("Abortando...")
+            break
         count += 1
     elapsed = time.time() - start_time
 

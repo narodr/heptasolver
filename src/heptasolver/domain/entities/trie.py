@@ -4,7 +4,7 @@ import json
 from typing import List, Dict
 
 
-RAE_PATH = os.path.join(os.path.dirname(__file__), '..', '..', '..', 'data', 'rae.json')
+RAE_PATH = os.path.join(os.path.dirname(__file__), '..', '..', '..', '..', 'data', 'rae.json')
 RAE_PATH = os.path.abspath(RAE_PATH)
 
 
