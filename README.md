@@ -1,5 +1,3 @@
-# heptasolver
-
 Juega o resuelve un [heptagrama](https://elpais.com/juegos/heptagrama/)
 
 > A partir de siete letras dispuestas de manera hexagonal, con una de ellas en la 
@@ -25,7 +23,7 @@ pip install .
 ```
 
 Para desarrollo, instálalo en modo editable:
-
+    
 ```sh
 pip install -e .
 ```
@@ -49,6 +47,6 @@ heptasolver solve --letras abdcefg --centro a
 
 ## Roadmap
 
-- [] Otros diccionarios de palabras 
-- [] Puntuación
- 
+- [ ] Otros diccionarios de palabras 
+- [ ] Puntuación
+
