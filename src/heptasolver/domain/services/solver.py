@@ -24,8 +24,7 @@ class Solver:
         keys = self._get_keys()
         for key in keys:
             if not self.dictionary.get_words_in_node(key):
-                # TODO: como se accede a las palabras de una llave
-                break
+                continue
             for word in self.dictionary.get_words_in_node(key):
                 words.append(word)
         return words
@@ -40,6 +39,8 @@ class Solver:
         words = []
         keys = self._get_keys(contains_letter=letter)
         for key in keys:
+            if not self.dictionary.get_words_in_node(key):
+                continue
             for word in self.dictionary.get_words_in_node(key):
                 if word[0] == letter:
                     words.append(word)
