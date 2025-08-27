@@ -21,7 +21,7 @@ def main(stdscr, solver):
             stdscr.clrtoeol()
             solution_is_toggled = False
 
-    palabras = solver.solve_all()[:3]
+    palabras = solver.solve_all()
     encontradas = []
 
     curses.echo()
