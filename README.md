@@ -1,52 +1,50 @@
-Juega o resuelve un [heptagrama](https://elpais.com/juegos/heptagrama/)
+[![es](https://img.shields.io/badge/README-ES-dodgerblue)](README.es.md)
 
-> A partir de siete letras dispuestas de manera hexagonal, con una de ellas en la 
-posición central, el objetivo es formar el máximo número de palabras de al menos 
-tres letras.
-Puedes repetir las letras, pero siempre debes incluir la que está en la posición central. 
-No se admiten nombres propios, plurales ni formas verbales conjugadas (solo infinitivos). 
+Play or solve a [heptagram](https://elpais.com/juegos/heptagrama/)
 
-### Jugar una partida
+> Starting from seven letters arranged in a hexagonal shape, with one of them in the 
+central position, the objective is to form the maximum number of words with at least 
+three letters.
+You can repeat letters, but you must always include the one in the central position. 
+Proper nouns, plurals, and conjugated verb forms (only infinitives) are not allowed.
 
-Puedes jugar una partida a través de la terminal ejecutando el comando play. Opcionalmente puedes especificar el centro o las letras que quieres jugar.
+### Play a game
+
+You can play a game through the terminal by running the play command. Optionally you can specify the center or the letters you want to play.
 
 ```sh
 heptasolver play [-l abcdefg] [-c a]
 ```
 
-## Instalación
+## Install
 
-Clona el repositorio y crea un entorno virtual. Instala la librería:
+Clone the repo and (optionally) create a virtual environment. Then install the package: 
 
 ```sh
 pip install .
 ```
 
-Para desarrollo, instálalo en modo editable:
+For developers, install it in editable mode:
     
 ```sh
 pip install -e .
 ```
 
-y ejecuta los tests:
+and execute tests:
 
 ```sh
 pytest
 ```
 
-## Extra: Resolver un heptagrama
+## Extra: Solve
 
 > [!WARNING] 
-> Usa `pyautogui` para escribir automáticamente las palabras en la ventana seleccionada.
+> This command use `pyautogui` to automatically write words in the selected window.
 
-Si quieres resolver automáticamente un hetpagrama, puedes usar el comando solve y dirigirte a la pantalla en la que está el heptagrama.
+To solve a heptagram, execute
 
 ```sh
 heptasolver solve --letras abdcefg --centro a
 ```
 
-## Roadmap
-
-- [ ] Otros diccionarios de palabras 
-- [ ] Puntuación
-
+then move to the target window.
